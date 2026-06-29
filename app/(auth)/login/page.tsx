@@ -14,7 +14,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { Mail, Lock, ArrowRight, Loader2 } from 'lucide-react';
+import { Mail, Lock, ArrowRight, Loader2, Database } from 'lucide-react';
 import type { LoginInput } from '@/lib/validations/auth';
 
 export default function LoginPage() {
@@ -31,9 +31,16 @@ export default function LoginPage() {
   };
 
   return (
-    <Card className="border-border/50 shadow-xl shadow-black/5">
+    <Card className="border-border/60 shadow-2xl shadow-black/10">
       <CardHeader className="space-y-1 text-center">
-        <CardTitle className="text-2xl font-bold tracking-tight">
+        <Link
+          href="/"
+          className="mb-2 flex items-center justify-center gap-2"
+        >
+          <Database className="size-7 text-primary" />
+          <span className="text-2xl font-bold tracking-tight">NovaCore</span>
+        </Link>
+        <CardTitle className="text-xl font-semibold tracking-tight">
           Đăng nhập
         </CardTitle>
         <CardDescription>
