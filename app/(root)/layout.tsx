@@ -1,13 +1,14 @@
 import Header from '@/components/Header';
-import { headers } from 'next/headers';
-import { redirect } from 'next/navigation';
-async function Layout({ children }: { children: React.ReactNode }) {
 
-	return (
-		<main className='min-h-screen text-gray-400'>
-			<div className='container py-10'>{children}</div>
-		</main>
-	);
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <main className="min-h-screen flex flex-col">
+      <Header />
+      <div className="flex-1">{children}</div>
+    </main>
+  );
 }
-
-export default Layout;
