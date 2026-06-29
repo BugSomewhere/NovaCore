@@ -64,7 +64,7 @@ export async function POST(request: Request) {
 
     // Create JWT and set cookie
     const token = await signToken({
-      userId: user.id,
+      id: user.id,
       email: user.email,
       role: 'member',
     });

@@ -12,7 +12,7 @@ export async function GET() {
     `SELECT u.id, u.email, u.full_name, u.avartar
      FROM users u
      WHERE u.id = $1`,
-    [payload.userId]
+    [payload.id]
   );
 
   if (result.rows.length === 0) {
